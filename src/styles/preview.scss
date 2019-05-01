@@ -1,0 +1,83 @@
+@import "./variables.scss";
+
+.preview {
+    margin-top: 144px;
+    .card {
+        box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+    }
+
+    .heading {
+        font-size: 16px;
+        color: darken($neutral, 10%);
+        text-align: right;
+        text-transform: uppercase;
+    }
+
+    .header,
+    .content {
+        padding: 15px;
+    }
+
+    .header {
+        min-height: 90px;
+        background: $mainBlue;
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+
+        h1 {
+            flex: 3;
+            color: white;
+        }
+
+        .profile {
+            background: white;
+            box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+            width: 90px;
+            height: 90px;
+            position: relative;
+            top: 30px;
+
+            img {
+                width: 100%;
+            }
+
+            svg {
+                padding-top: 20px;
+                fill: #ddd;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .content {
+        background: white;
+    }
+
+    .card-row {
+        display: flex;
+        min-height: 48px;
+        border-bottom: 1px solid #ddd;
+        align-items: flex-end;
+
+        .label {
+            font-size: 13px;
+            min-width: 90px;
+            color: $mainBlue;
+            text-transform: uppercase;
+        }
+
+        & > div {
+            padding-top: 24px;
+            min-height: 48px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .preview {
+        margin-top: 32px;
+        margin-bottom: 32px;
+    }
+}
